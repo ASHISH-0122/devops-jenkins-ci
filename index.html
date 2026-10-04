@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Registration Form </title>
+</head>
+<body>
+    <h1> Event Registration Form !! </h1>
+    <form id="RegistrationForm">
+        <br>
+        <label id="name" > Name : </label>
+        <input type="text" for="name"> 
+        <br> 
+        <br>
+        <label id="Phone" > Phone : </label>
+        <input type="tel" for="Phone"> 
+        <br> 
+        <br>
+        <label id="email"> Email : </label>
+        <input type="email" for="email"> 
+        <br> 
+        <br>
+        <label id="gender"> Gender : </label>
+        <input type="radio" name="gender" value="male"> male
+        <input type="radio" name="gender" value="female"> female
+        <br> 
+        <br>
+        <label id="password" > Set password : </label>
+        <input type="password" for="password"> 
+        <br> 
+        <br>
+        <input type="submit" value="Register!">
+    </form>
+
+    <!-- <div id="successmessage" style="display: none">
+        <h3> Registration Successfull !! </h3>
+    </div> -->
+
+    <script>
+        document.getElementById("RegistrationForm").addEventListener("submit",function(event) {
+            event.preventDefault();
+            alert("Registration Sucessfull !!! ");
+            document.getElementById("registrationForm").reset();
+        })
+    </script>
+</body>
+</html>
